@@ -1,8 +1,13 @@
 import React from 'react'
+import { Header } from '../../sections/header/Header'
+import TaskListNumbers from '../../sections/TaskListNumbers'
 
 const EmployeeDashboard = () => {
   return (
-    <div>EmployeeDashboard</div>
+    <div className='flex flex-col'>
+      <Header />
+      <TaskListNumbers />
+    </div>
   )
 }
 
