@@ -19,3 +19,8 @@ body{
 #tasklist::-webkit-scrollbar {
   display: none
 }
+
+.input-date::-webkit-calendar-picker-indicator {
+  filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(180deg);
+  cursor: pointer;
+}

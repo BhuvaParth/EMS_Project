@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from '../../sections/header/Header'
+import Header  from '../../sections/header/Header'
 import TaskListNumbers from '../../sections/TaskListNumbers'
 import TaskList from '../TaskList/TaskList'
 
