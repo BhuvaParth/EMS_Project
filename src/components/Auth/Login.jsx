@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
-const Login = () => {
+const Login = ({ hendleLogin }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const submitHendler = (e) => {
         e.preventDefault();
-
+        hendleLogin(email, password)
         setEmail("");
         setPassword("");
     }
@@ -23,10 +23,10 @@ const Login = () => {
                         <div>
                             <label className="block text-white !mb-2">Email</label>
                             <input
-                            value={email}
-                            onChange={(e)=>{
-                                setEmail(e.target.value);   
-                            }}
+                                value={email}
+                                onChange={(e) => {
+                                    setEmail(e.target.value);
+                                }}
                                 type="email"
                                 required
                                 placeholder="Enter your email"
@@ -37,7 +37,7 @@ const Login = () => {
                             <label className="block text-white !mb-2">Password</label>
                             <input
                                 value={password}
-                                onChange={(e)=>{
+                                onChange={(e) => {
                                     setPassword(e.target.value)
                                 }}
                                 type="password"
