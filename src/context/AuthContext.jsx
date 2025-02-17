@@ -1,8 +1,11 @@
 import React from 'react'
 
-const AuthContext = () => {
+const AuthContext = ({children}) => {
   return (
-    <div>AuthContext</div>
+    <>
+      <div className='text-white'>{children}</div>
+    </>
+
   )
 }
 

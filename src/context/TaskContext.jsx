@@ -1,8 +1,10 @@
 import React from 'react'
 
-const TaskContext = () => {
+const TaskContext = ({children}) => {
   return (
-    <div>TaskContext</div>
+    <>
+      <div className='text-white'>{children}</div>
+    </>
   )
 }
 
