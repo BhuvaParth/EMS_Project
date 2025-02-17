@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TaskListNumbers = () => {
+const TaskListNumbers = ({data}) => {
     return (
         <>
             <section className='w-full !my-5 text-white'>

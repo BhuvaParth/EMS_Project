@@ -1,8 +1,10 @@
 const employees = [
   {
     "id": 1,
+    "firstName": "Amit",
     "email": "employee1@example.com",
     "password": "123",
+    "taskCount": { "active": 2, "newTask": 1, "completed": 1, "failed": 0 },
     "tasks": [
       {
         "title": "Code Review",
@@ -13,7 +15,7 @@ const employees = [
         "newTask": false,
         "completed": false,
         "failed": false
-      }, 
+      },
       {
         "title": "Write Documentation",
         "description": "Update the API documentation with the latest changes.",
@@ -34,12 +36,14 @@ const employees = [
         "completed": false,
         "failed": false
       }
-    ]
+    ],
   },
   {
     "id": 2,
+    "firstName": "Rahul",
     "email": "employee2@example.com",
     "password": "123",
+    "taskCount": { "active": 2, "newTask": 1, "completed": 1, "failed": 0 },
     "tasks": [
       {
         "title": "Client Follow-Up",
@@ -71,12 +75,14 @@ const employees = [
         "completed": false,
         "failed": false
       }
-    ]
+    ],
   },
   {
     "id": 3,
+    "firstName": "Priya",
     "email": "employee3@example.com",
     "password": "123",
+    "taskCount": { "active": 1, "newTask": 0, "completed": 1, "failed": 0 },
     "tasks": [
       {
         "title": "Database Optimization",
@@ -98,12 +104,14 @@ const employees = [
         "completed": true,
         "failed": false
       }
-    ]
+    ],
   },
   {
     "id": 4,
+    "firstName": "Neha",
     "email": "employee4@example.com",
     "password": "123",
+    "taskCount": { "active": 1, "newTask": 1, "completed": 1, "failed": 0 },
     "tasks": [
       {
         "title": "Product Testing",
@@ -125,12 +133,14 @@ const employees = [
         "completed": true,
         "failed": false
       }
-    ]
+    ],
   },
   {
     "id": 5,
+    "firstName": "Sanya",
     "email": "employee5@example.com",
     "password": "123",
+    "taskCount": { "active": 1, "newTask": 0, "completed": 1, "failed": 0 },
     "tasks": [
       {
         "title": "Social Media Strategy",
@@ -152,7 +162,7 @@ const employees = [
         "completed": true,
         "failed": false
       }
-    ]
+    ],
   }
 ];
 
@@ -167,8 +177,8 @@ export const setLocalStorage = () => {
   localStorage.setItem('admin', JSON.stringify(admin));
 }
 export const getLocalStorage = () => {
-  const employees = JSON.parse(localStorage.getItem('employees'));  
-  const admin = JSON.parse(localStorage.getItem('admin'));  
+  const employees = JSON.parse(localStorage.getItem('employees'));
+  const admin = JSON.parse(localStorage.getItem('admin'));
 
-  return{employees, admin};
+  return { employees, admin };
 }
